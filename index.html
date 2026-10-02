@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zachikō Sushi · Temporada Sakura 2027</title>
+  <meta name="description" content="Zachikō, cadena de sushi de Buenos Aires. Temporada Sakura del 1 de febrero al 30 de abril: tres combos de 25 piezas y una servilleta bordada de regalo." />
+  <link rel="icon" href="img/marca/flor-estambres.png" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="header__in">
+      <a href="#inicio" class="logo" aria-label="Zachikō Sushi, inicio">
+        <img src="img/marca/logo-zachiko.png" alt="Zachikō Sushi" width="1181" height="277" />
+      </a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#temporada">La temporada</a>
+        <a href="#combos">Combos</a>
+        <a href="#servilleta">Regalo</a>
+        <a href="#piezas">Piezas</a>
+        <a href="#locales">Locales</a>
+      </nav>
+      <a href="#locales" class="btn btn--sm header__cta">Pedí ahora</a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <img class="hero__flor hero__flor--1" src="img/marca/flor-simple.png" alt="" aria-hidden="true" />
+      <img class="hero__flor hero__flor--2" src="img/marca/flor-simple.png" alt="" aria-hidden="true" />
+      <img class="hero__flor hero__flor--3" src="img/marca/flor-estambres.png" alt="" aria-hidden="true" />
+      <canvas id="petalos" aria-hidden="true"></canvas>
+      <div class="wrap hero__grid">
+        <div class="hero__txt">
+          <p class="kicker">Edición limitada · 01.02 — 30.04.2027</p>
+          <h1>Temporada <span>Sakura</span></h1>
+          <p class="hero__bajada">Tres combos de 25 piezas para celebrar la floración del cerezo, en nuestra caja de edición especial.</p>
+          <div class="hero__acciones">
+            <a href="#combos" class="btn">Ver combos</a>
+            <a href="#locales" class="btn btn--linea">Encontrá tu local</a>
+          </div>
+        </div>
+        <div class="hero__caja">
+          <img id="heroImg" src="img/marca/caja-cerrada.webp" data-combo="img/marca/hero-combo.png" alt="Combo Zachikō: caja, palillos, salsas de soja y teriyaki y servilleta bordada" width="1200" height="894" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= QUIÉNES SOMOS ================= -->
+    <section class="section evento" id="temporada">
+      <div class="wrap evento__grid">
+        <figure class="evento__foto">
+          <img src="img/evento.jpg" alt="Rama de cerezo en flor" loading="lazy" />
+          <figcaption>桜 · sakura</figcaption>
+        </figure>
+        <div class="evento__txt">
+          <p class="kicker">Quiénes somos</p>
+          <h2>Somos Zachikō.<br /><span>Cada año, celebramos la flor.</span></h2>
+          <p>Somos una cadena de sushi de Buenos Aires con cuatro locales en Palermo, Belgrano, Vicente López y San Isidro. Además de lo que servimos todos los días, cada año conmemoramos el <strong>sakura</strong>: la floración del cerezo en Japón.</p>
+          <p>Allá el cerezo florece de sur a norte, y cada árbol dura en flor apenas una semana. Por eso existe el <strong>hanami</strong>, la costumbre de reunirse a comer bajo los árboles antes de que caigan los pétalos. Nuestra temporada sigue ese mismo recorrido: <strong>del 1 de febrero al 30 de abril</strong>, un combo por mes y un regalo el día que florece cada ciudad.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COMBOS ================= -->
+    <section class="section combos" id="combos">
+      <img class="deco-flor deco-flor--combos" src="img/marca/flor-simple.png" alt="" aria-hidden="true" />
+      <div class="wrap">
+        <header class="section__head">
+          <p class="kicker">Combos de temporada</p>
+          <h2>Tres boxes, <span>25 piezas cada uno.</span></h2>
+          <p class="lead">Todos traen 10 Sakura Roll, la pieza de la temporada, y 15 piezas que cambian según el momento de la flor.</p>
+        </header>
+        <div class="combos__grid" id="combosGrid"><!-- JS --></div>
+      </div>
+    </section>
+
+    <!-- ================= REGALO: AGENDATE ================= -->
+    <section class="servilleta" id="servilleta">
+      <img class="deco-flor deco-flor--serv" src="img/marca/flor-estambres.png" alt="" aria-hidden="true" />
+      <div class="wrap servilleta__grid">
+        <div class="servilleta__txt">
+          <p class="kicker">Regalo de temporada</p>
+          <h2>Agendate <span>estas fechas</span></h2>
+          <p class="servilleta__bajada">y sé de los primeros en recibir un <strong>regalo especial</strong>.</p>
+          <p class="servilleta__detalle">Los primeros 25 clientes de cada local que pidan un combo Sakura se llevan una servilleta bordada.</p>
+        </div>
+        <figure class="servilleta__fig">
+          <img class="servilleta__img" src="img/marca/servilleta.png" alt="Servilleta de algodón bordada con el logo Zachikō y la flor de cerezo" loading="lazy" />
+        </figure>
+      </div>
+      <div class="wrap"><ol class="fechas fechas--fila" id="fechas"><!-- JS --></ol></div>
+    </section>
+
+    <!-- ================= PIEZAS ================= -->
+    <section class="section piezas" id="piezas">
+      <div class="wrap">
+        <header class="section__head section__head--row">
+          <div>
+            <p class="kicker">Lo que va en cada box</p>
+            <h2>Nuestras <span>piezas.</span></h2>
+          </div>
+          <ul class="leyenda" id="leyenda" aria-label="Referencia de combos"><!-- JS --></ul>
+        </header>
+        <div class="piezas__grid" id="piezasGrid"><!-- JS --></div>
+      </div>
+    </section>
+
+    <!-- ================= LOCALES ================= -->
+    <section class="section locales" id="locales">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="kicker">Sucursales</p>
+          <h2>Cuatro locales, <span>un mismo cerezo.</span></h2>
+          <p class="lead">Tocá una flor del mapa para ver la dirección, el horario y cómo pedir.</p>
+        </header>
+        <div class="locales__grid">
+          <div class="mapa" id="mapa" role="group" aria-label="Mapa de sucursales">
+            <img src="img/marca/mapa.png" alt="Mapa de CABA y zona norte con los cuatro locales" width="435" height="390" />
+            <!-- pines: JS -->
+          </div>
+          <div class="local-info" id="localInfo" aria-live="polite"><!-- JS --></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a href="#locales" class="fab" id="fab" aria-label="Pedí ahora en tu local">
+    <img src="img/marca/flor-simple.png" alt="" aria-hidden="true" /> Pedí ahora
+  </a>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div class="footer__marca">
+        <img src="img/marca/logo-zachiko-blanco.png" alt="Zachikō Sushi" width="1181" height="277" class="footer__logo" />
+        <p>Cadena de sushi de Buenos Aires. Salón, take away y delivery en Palermo, Belgrano, Vicente López y San Isidro.</p>
+        <div id="fHorario"></div>
+      </div>
+      <div>
+        <h4>Locales</h4>
+        <ul id="fLocales"></ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:hola@zachiko.com.ar">hola@zachiko.com.ar</a></li>
+          <li><a href="#" rel="noopener">Instagram @zachiko.sushi</a></li>
+          <li><a href="#locales">WhatsApp de cada local</a></li>
+          <li>Delivery propio · 3 km de cada local</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer__legal">
+      <p>© 2027 Zachikō Sushi. Proyecto académico — Tecnología 2, Cátedra Zachin, FADU–UBA. Direcciones, teléfonos y precios ficticios.</p>
+      <p>Fotos de piezas y cerezos: Wikimedia Commons — Think Draw (CC BY 2.0), Tim Reckmann (CC BY 2.0), Tiia Monto (CC BY-SA 3.0), young (CC BY-SA 2.0), bluewaikiki.com (CC BY 2.0), PattayaPatrol (CC BY-SA 4.0), Raita Futo (CC BY 2.0), Simon Launay (CC0). Recortes modificados.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

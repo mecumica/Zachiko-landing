@@ -1,0 +1,39 @@
+ZACHIKO Sushi · Temporada Sakura 2027 — Landing (maqueta funcional)
+===================================================================
+
+CÓMO VERLA
+1. VS Code > Archivo > Abrir carpeta… > esta carpeta "landing".
+2. Si aparece "Modo restringido": clic en "Manage" > "Trust".
+3. Extensión "Live Server" > clic derecho en index.html > "Open with Live Server".
+   (O doble clic en index.html para abrirla directo en Chrome.)
+Necesita internet para las tipografías y el mapa.
+
+ESTRUCTURA DE LA PÁGINA
+Hero (con pétalos) > Quiénes somos / la temporada > 3 combos de 25 piezas >
+Banner "Llevate tu servilleta" > Piezas del Sakura > Sucursales + mapa > Footer
+
+ARCHIVOS
+index.html        estructura
+css/styles.css    diseño (colores arriba de todo, en :root)
+js/data.js        TODO EL CONTENIDO: combos, piezas, fechas de regalo, locales, horarios
+js/main.js        interacciones (pétalos, contador, mapa, menú)
+img/              fotos (recortadas sin fondo en .webp)
+
+FECHAS DE LA SERVILLETA (primeros 25 clientes de cada local que pidan un combo)
+- Martes 2/2/2027  · Islas Amami (floración 1/2/2026; el 1/2/2027 es lunes y cerramos)
+- Viernes 19/3/2027 · Tokio (floración 19/3/2026)
+- Domingo 18/4/2027 · Sapporo, Hokkaido (floración 18/4/2026)
+Fuente: Agencia Meteorológica de Japón (JMA), registro de floración 2026:
+https://www.data.jma.go.jp/sakura/data/sakura_kaika.html
+Okinawa (Naha) floreció el 18/1/2026, antes del inicio de la temporada.
+El pronóstico oficial 2027 recién se publica en enero de 2027.
+
+CRÉDITOS DE FOTOS (Wikimedia Commons, licencias libres; recortadas y sin fondo)
+- Salmon sushi cut — Think Draw (CC BY 2.0)
+- California Sushi mit Kaviar / Sushi (14927932561) — Tim Reckmann (CC BY 2.0)
+- California roll / Sushi roll — Tiia Monto (CC BY-SA 3.0)
+- Sushi planet mango roll — young (CC BY-SA 2.0)
+- Salmon Roll Sushi, September 2008 — bluewaikiki.com (CC BY 2.0)
+- Gunkan sushi tray (DSCF0616) — PattayaPatrol (CC BY-SA 4.0)
+- Sakura branch — Raita Futo (CC BY 2.0)
+- Cherry Blossom (Unsplash) — Simon Launay (CC0)
