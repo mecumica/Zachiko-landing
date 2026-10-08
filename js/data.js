@@ -80,9 +80,9 @@ const PIEZAS = {
   },
 };
 
-/* 3 combos de 25 piezas. "piezas": [id, cantidad]
+/* 3 combos de 20 piezas. "piezas": [id, cantidad]
    "incluye": lo que viene con cada caja (pedido promedio del informe) */
-const INCLUYE = ["25 piezas", "Palillos ×4", "Salsas ×2"];
+const INCLUYE = ["20 piezas", "Palillos ×4", "Salsas ×2"];
 const COMBOS = [
   {
     id: "kaika",
@@ -93,7 +93,7 @@ const COMBOS = [
     color: "#F8CFE2", tinta: "#95182A",
     precio: "$ 32.900",
     texto: "Para abrir la temporada: el Sakura Roll acompañado por los clásicos de siempre.",
-    piezas: [["sakura-roll", 10], ["philadelphia", 5], ["california", 5], ["niguiri-salmon", 5]],
+    piezas: [["sakura-roll", 8], ["philadelphia", 4], ["california", 4], ["niguiri-salmon", 4]],
     foto: "img/marca/combo-kaika.png",
   },
   {
@@ -105,7 +105,7 @@ const COMBOS = [
     color: "#EFA6CA", tinta: "#95182A",
     precio: "$ 36.500",
     texto: "El punto más alto del cerezo: sumamos langostino en tempura y salmón con palta.",
-    piezas: [["sakura-roll", 10], ["ebi-mango", 5], ["sake-avocado", 5], ["niguiri-salmon", 5]],
+    piezas: [["sakura-roll", 8], ["ebi-mango", 4], ["sake-avocado", 4], ["niguiri-salmon", 4]],
     foto: "img/marca/combo-mankai.png",
   },
   {
@@ -117,7 +117,7 @@ const COMBOS = [
     color: "#95182A", tinta: "#ffffff",
     precio: "$ 34.900",
     texto: "Para despedir la flor: una mezcla fresca con opción veggie incluida.",
-    piezas: [["sakura-roll", 10], ["ebi-mango", 5], ["gunkan-tobiko", 5], ["veggie", 5]],
+    piezas: [["sakura-roll", 8], ["ebi-mango", 4], ["gunkan-tobiko", 4], ["veggie", 4]],
     foto: "img/marca/combo-hanafubuki.png",
   },
 ];

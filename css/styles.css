@@ -572,3 +572,12 @@ strong { color: var(--savvy); font-weight: 700; }
   .combo__img { aspect-ratio: 1 / 1 !important; padding: 10px !important; overflow: hidden; display: flex !important; align-items: center; justify-content: center; }
   .combo__img img { width: 86% !important; height: auto !important; max-height: 100%; object-fit: contain; margin: 0 auto; transform: none !important; }
 }
+/* chip de fecha más chico */
+.servilleta .fechas--fila .fecha__dia { padding: 4px 9px !important; gap: 4px !important; }
+.servilleta .fechas--fila .fecha__dia b { font-size: 1.1rem !important; }
+.servilleta .fechas--fila .fecha__dia span { font-size: .7rem !important; }
+@media (max-width: 760px) {
+  .servilleta .fechas--fila .fecha__dia { padding: 2px 6px !important; gap: 3px !important; }
+  .servilleta .fechas--fila .fecha__dia b { font-size: .82rem !important; }
+  .servilleta .fechas--fila .fecha__dia span { font-size: .55rem !important; }
+}
