@@ -496,3 +496,55 @@ strong { color: var(--savvy); font-weight: 700; }
   .servilleta .fechas--fila .fecha { text-align: left; justify-items: start; }
   .servilleta .fechas--fila .fecha__cal { grid-column: 1 !important; padding: 6px 10px !important; font-size: .7rem !important; }
 }
+
+/* ===== Ajustes mobile (combos, regalo, fechas, locales) ===== */
+@media (max-width: 760px) {
+  /* combos: cards más chicas que entran en pantalla, sin desplazar la página */
+  .combos__grid { grid-auto-columns: calc(50% - 6px); gap: 12px; margin: 0; padding: 4px 0 16px; scroll-padding: 0; }
+  .combos__grid .combo.reveal, .combos__grid .combo.reveal.is-visible { transform: none !important; }
+  .combo { padding: 10px; border-radius: 16px; }
+  .combo__nombre { font-size: 1rem; gap: 4px; }
+  .combo__kanji { font-size: .72rem; }
+  .combo__img { padding: 2px; border-radius: 10px; }
+  .combo__toggle { font-size: .74rem; padding-top: 6px; }
+  .combo__det .combo__sig { font-size: .78rem; }
+  .combo__det .combo__txt { font-size: .74rem; }
+  .combo__incl { font-size: .64rem !important; }
+  .combo .btn.btn--block { padding: 6px 11px !important; font-size: .72rem !important; }
+
+  /* regalo: título → bajada → servilleta grande → info chica → fechas */
+  .servilleta .servilleta__grid { display: flex !important; flex-direction: column; align-items: stretch; gap: 10px; }
+  .servilleta__txt { display: contents; }
+  .servilleta .kicker { order: 1; font-size: .62rem; letter-spacing: .22em; }
+  .servilleta h2 { order: 2; }
+  .servilleta__bajada { order: 3; }
+  .servilleta .servilleta__fig { order: 4 !important; margin: 4px auto 0; width: 100%; }
+  .servilleta .servilleta__fig .servilleta__img { width: 100% !important; max-width: 380px; }
+  .servilleta__detalle { order: 5; font-size: .78rem !important; opacity: .85; }
+
+  /* locales: los nombres pegados al mapa */
+  .locales__grid { display: flex; flex-direction: column; gap: 14px; }
+  .local-info { display: contents; }
+  .mapa { order: 1; }
+  .local-info__tabs { order: 2; margin-top: 0 !important; }
+  .local-info__card { order: 3; }
+}
+/* fechas: mes al lado del número (2 FEB) */
+.fecha__dia { display: flex; align-items: baseline; justify-content: center; gap: 4px; padding: 6px 8px; }
+.fecha__dia b { display: inline; }
+.servilleta .fechas--fila .fecha__dia { width: auto !important; justify-self: start; }
+/* fechas en una sola columna: [2 FEB] / título / texto / Agendar, todo a la izquierda */
+.servilleta .fechas--fila .fecha { grid-template-columns: 1fr !important; justify-items: start; text-align: left; gap: 8px; }
+.servilleta .fechas--fila .fecha__cal { grid-column: 1 !important; }
+.servilleta .fechas--fila .fecha { grid-template-rows: auto 1fr auto !important; align-content: start; }
+
+/* Desktop/tablet: botones de locales arriba del recuadro */
+@media (min-width: 761px) {
+  .local-info { display: flex; flex-direction: column; gap: 14px; }
+  .local-info__tabs { order: -1; margin-top: 0 !important; }
+}
+/* chip de fecha: "2 FEB" en una sola línea, mes más legible */
+.servilleta .fechas--fila .fecha__dia { padding: 6px 12px; border-radius: 10px; gap: 6px; }
+.servilleta .fechas--fila .fecha__dia b { font-size: 1.5rem; }
+.servilleta .fechas--fila .fecha__dia span { font-size: .95rem; font-weight: 700; letter-spacing: .06em; }
+.servilleta .fechas--fila .fecha h3 { margin-top: 2px; }
