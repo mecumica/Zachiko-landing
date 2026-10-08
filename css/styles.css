@@ -405,3 +405,94 @@ strong { color: var(--savvy); font-weight: 700; }
   .servilleta .fechas--fila .fecha__cal { font-size: .72rem; padding: 7px 6px; gap: 4px; }
   .servilleta .fechas--fila .fecha__cal svg { width: 13px; height: 13px; }
 }
+
+/* ===== Combos responsive: cards compactas ===== */
+@media (max-width: 1080px) and (min-width: 761px) {
+  .combo { padding: 14px; gap: 10px; border-radius: 18px; }
+  .combo__nombre { font-size: 1.35rem; }
+  .combo__kanji { font-size: .9rem; }
+  .combo__img { aspect-ratio: 4 / 3; padding: 8px; border-radius: 14px; }
+  .combo__body { gap: 6px; }
+  .combo__sig { font-size: .9rem; }
+  .combo__txt { font-size: .85rem; line-height: 1.4; }
+  .combo__incl { font-size: .75rem; padding-top: 8px; }
+}
+@media (max-width: 760px) {
+  /* carrusel horizontal: se desliza con el dedo y asoma la siguiente card */
+  .combos__grid {
+    display: grid; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 74%;
+    gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    margin: 0 -16px; padding: 4px 16px 18px; scroll-padding: 0 16px; scrollbar-width: none;
+  }
+  .combos__grid::-webkit-scrollbar { display: none; }
+  .combo { scroll-snap-align: start; padding: 14px; gap: 8px; border-radius: 18px; }
+  .combo:hover { transform: none; }
+  .combo__nombre { font-size: 1.3rem; gap: 6px; }
+  .combo__kanji { font-size: .85rem; }
+  .combo__img { aspect-ratio: 4 / 3; padding: 6px; border-radius: 12px; }
+  .combo__body { gap: 6px; }
+  .combo__sig { font-size: .85rem; }
+  .combo__txt { font-size: .85rem; line-height: 1.4; }
+  .combo__incl { font-size: .72rem; padding-top: 8px; }
+  .combo .btn--sm { padding: 9px 14px; font-size: .85rem; }
+}
+@media (max-width: 760px) {
+  .combos__grid { grid-auto-columns: 62%; gap: 10px; }
+  .combo { padding: 12px; }
+  .combo__nombre { font-size: 1.15rem; }
+  .combo__img { padding: 4px; }
+  .combo__txt { font-size: .8rem; }
+  .combo .btn { padding: 8px 12px !important; font-size: .8rem !important; min-height: 0 !important; }
+}
+@media (max-width: 1080px) { .combo__incl { white-space: nowrap; font-size: .7rem; } }
+@media (max-width: 1080px) and (min-width: 761px) { .combo .btn { padding: 10px 14px !important; font-size: .85rem !important; } }
+@media (max-width: 760px) { .combo__incl { white-space: normal; font-size: .7rem; } }
+/* nuevas fotos de combos (verticales): recuadro cuadrado */
+.combo__img { aspect-ratio: 1 / 1 !important; }
+/* hero: fondo más claro */
+.hero { background: radial-gradient(ellipse at 75% 50%, #FFF4F9 0%, #FFFAFC 50%, #FFFFFF 100%) !important; }
+.hero__caja img.is-combo { filter: drop-shadow(0 26px 28px rgba(149, 24, 42, .16)); }
+.hero__flor--1, .hero__flor--2 { opacity: .3 !important; }
+/* hero: combo 20% más chico (108% → 86%), centrado en su columna */
+.hero__caja img.is-combo { width: 86% !important; max-width: none; margin-left: 7% !important; margin-right: 0; }
+
+/* ===== Mobile: hero en orden título → imagen → bajada/botones ===== */
+@media (max-width: 760px) {
+  .hero__txt { display: contents; }
+  .hero__grid { gap: 14px; }
+  .hero .kicker { order: 1; }
+  .hero h1 { order: 2; }
+  .hero__caja { order: 3 !important; margin: 4px auto 0; }
+  .hero__bajada { order: 4; }
+  .hero__acciones { order: 5; margin-top: 4px; }
+}
+
+/* ===== Combos: info desplegable en mobile ===== */
+.combo__toggle { display: none; }
+.combo__det { display: flex; flex-direction: column; gap: 10px; }
+@media (max-width: 760px) {
+  .combos__grid { grid-auto-columns: 58%; }
+  .combo { gap: 8px; align-self: start; }
+  .combo__toggle {
+    display: flex; justify-content: space-between; align-items: center; width: 100%;
+    background: none; border: 0; border-top: 1px dashed var(--linea); padding: 8px 2px 2px;
+    font: inherit; font-size: .82rem; font-weight: 700; color: var(--savvy); cursor: pointer;
+  }
+  .combo__toggle span { font-size: 1.1rem; line-height: 1; }
+  .combo__det { display: grid; grid-template-rows: 0fr; overflow: hidden; transition: grid-template-rows .3s ease; gap: 0; }
+  .combo__det > * { min-height: 0; }
+  .combo__det { display: block; max-height: 0; transition: max-height .35s ease; }
+  .combo.is-open .combo__det { max-height: 320px; }
+  .combo__det .combo__sig { margin-top: 4px; }
+  .combo__det .combo__txt { margin: 4px 0; }
+  .combo__body { gap: 8px; }
+}
+
+/* ===== Botones Pedí / Agendar: chicos y alineados a la izquierda con el texto ===== */
+.combo .btn.btn--block { width: auto !important; align-self: flex-start; padding: 9px 18px !important; font-size: .85rem !important; }
+.servilleta .fechas--fila .fecha__cal { grid-column: 2 !important; justify-self: start !important; justify-content: flex-start; padding: 7px 14px !important; font-size: .78rem !important; margin-top: 4px; }
+@media (max-width: 760px) {
+  .combo .btn.btn--block { padding: 7px 14px !important; font-size: .78rem !important; }
+  .servilleta .fechas--fila .fecha { text-align: left; justify-items: start; }
+  .servilleta .fechas--fila .fecha__cal { grid-column: 1 !important; padding: 6px 10px !important; font-size: .7rem !important; }
+}

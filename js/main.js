@@ -42,15 +42,25 @@
     <article class="combo reveal" id="combo-${c.id}" style="--c:${c.color};--t:${c.tinta}">
       <h3 class="combo__nombre">${c.nombre} <span class="combo__kanji">${c.kanji}</span></h3>
       <div class="combo__img" data-src="">
-        <img src="${c.foto}" alt="Combo ${c.nombre}: caja Zachikō abierta con 25 piezas, palillos, salsas de soja y teriyaki y servilleta" loading="lazy" />
+        <img src="${c.foto}" alt="Combo ${c.nombre}: caja Zachikō abierta con 20 piezas, palillos, salsas de soja y teriyaki y servilleta" loading="lazy" />
       </div>
+      <button class="combo__toggle" type="button" aria-expanded="false" aria-controls="det-${c.id}">Ver qué trae <span aria-hidden="true">+</span></button>
       <div class="combo__body">
+        <div class="combo__det" id="det-${c.id}">
         <p class="combo__sig">“${c.significado}”</p>
         <p class="combo__txt">${c.texto}</p>
         <p class="combo__incl">${INCLUYE.join(" · ")}</p>
+        </div>
         <a href="#locales" class="btn btn--sm btn--block">Pedí en tu local</a>
       </div>
     </article>`).join("");
+  // Mobile: desplegar la info de cada combo
+  $$(".combo__toggle").forEach((b) => b.addEventListener("click", () => {
+    const card = b.closest(".combo");
+    const open = card.classList.toggle("is-open");
+    b.setAttribute("aria-expanded", open);
+    b.innerHTML = open ? 'Cerrar <span aria-hidden="true">−</span>' : 'Ver qué trae <span aria-hidden="true">+</span>';
+  }));
   // Si existe una foto propia del combo (img/combos/<id>-caja.jpg), reemplaza al mockup genérico
   $$(".combo__img").forEach((box) => {
     if (!box.dataset.src) return;
